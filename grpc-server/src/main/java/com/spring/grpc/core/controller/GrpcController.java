@@ -24,18 +24,5 @@ public class GrpcController extends PrimeNumberServiceGrpc.PrimeNumberServiceImp
         Response response = primeNumberService.calculate(request);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
-
-
-//        try {
-//            Response response = primeNumberService.calculate(request);
-//            responseObserver.onNext(response);
-//            responseObserver.onCompleted();
-//        } catch (Exception e) {
-//            responseObserver.onError(Status.INTERNAL
-//                    .withDescription(e.getMessage())
-//                    .augmentDescription("calculate()")
-//                    .withCause(e) // This can be attached to the Status locally, but NOT transmitted to the client!
-//                    .asRuntimeException());
-//        }
     }
 }
