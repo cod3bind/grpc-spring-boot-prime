@@ -1,0 +1,3 @@
+## Server Properties
+grpc:
+  port: 6565
