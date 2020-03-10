@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+// options for Java generated sources
+option java_multiple_files = true;
+option java_package = "com.spring.grpc.core.model";
+option java_outer_classname = "CoreGrpcApi";
+
+// The request message containing the number.
+message Request {
+    int32 number = 1;
+}
+
+// The response message containing the prime numbers list
+message Response {
+    repeated int32 primeNumbers = 1;
+}
+
+// The prime service definition.
+service PrimeNumberService {
+    // calculate prime numbers list
+    rpc calculate (Request) returns (Response);
+}
