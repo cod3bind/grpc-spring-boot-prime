@@ -33,8 +33,6 @@ public class PrimeNumberService {
                 .setNumber(number)
                 .build();
 
-//        log.info("Received Ping message -> {}", request.toString());
-
         Response response = stub.calculate(request);
 
         channel.shutdown();
